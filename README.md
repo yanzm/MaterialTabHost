@@ -83,15 +83,15 @@ Usage
 
 ### Type
 
-## MaterialTabHost.Type.FullScreenWidth
+#### MaterialTabHost.Type.FullScreenWidth
 
 ![FullScreenWidth](http://3.bp.blogspot.com/-4szD4lkQH74/VIfGci0GOkI/AAAAAAAARUQ/xObIpgmHhKI/s400/mth_fullwidth.png)
 
-## MaterialTabHost.Type.Centered
+#### MaterialTabHost.Type.Centered
 
 ![LeftOffset](http://2.bp.blogspot.com/-UAIRu67QxE0/VIfGcncmBfI/AAAAAAAARUM/-kXX7OS9oeI/s400/mth_centered.png)
 
-## MaterialTabHost.Type.LeftOffset
+#### MaterialTabHost.Type.LeftOffset
 
 ![LeftOffset](http://2.bp.blogspot.com/-C9_JSDk9D1Y/VIfGcx9dcfI/AAAAAAAARUU/xwgTMuW2YCs/s400/mth_leftoffset.png)
 
