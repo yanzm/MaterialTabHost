@@ -5,7 +5,9 @@ TabHost along with the specifications of the Material design
 http://www.google.com/design/spec/components/tabs.html
 
 Usage
-===============
+---------------
+
+### Layout XML
 
 ```
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -27,6 +29,8 @@ Usage
 
 </LinearLayout>
 ```
+
+### Set up
 
 ```
     @Override
@@ -61,8 +65,40 @@ Usage
     }
 ```
 
+### Color
+
+* backbround color : colorPrimary
+* indicator color : colorAccent or colorControlActivated
+
+```
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimaryDark">#00695C</item>
+        <item name="colorPrimary">#00897B</item>
+        <item name="colorAccent">#FFD54F</item>
+    </style>
+</resources>
+```
+
+### Type
+
+## MaterialTabHost.Type.FullScreenWidth
+
+![FullScreenWidth](http://3.bp.blogspot.com/-4szD4lkQH74/VIfGci0GOkI/AAAAAAAARUQ/xObIpgmHhKI/s400/mth_fullwidth.png)
+
+## MaterialTabHost.Type.Centered
+
+![LeftOffset](http://2.bp.blogspot.com/-UAIRu67QxE0/VIfGcncmBfI/AAAAAAAARUM/-kXX7OS9oeI/s400/mth_centered.png)
+
+## MaterialTabHost.Type.LeftOffset
+
+![LeftOffset](http://2.bp.blogspot.com/-C9_JSDk9D1Y/VIfGcx9dcfI/AAAAAAAARUU/xwgTMuW2YCs/s400/mth_leftoffset.png)
+
+
+
 LICENSE
-===============
+---------------
 
 ```
 Copyright 2014 Yuki Anzai
