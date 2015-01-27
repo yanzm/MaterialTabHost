@@ -1,0 +1,14 @@
+apply plugin: 'maven'
+
+def deployTo = new File(rootDir, "repository")
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository url: "file://${deployTo.absolutePath}"
+            pom.version = "1.0.1"
+            pom.groupId = "net.yanzm"
+            pom.artifactId = "mth"
+        }
+    }
+}
