@@ -207,6 +207,10 @@ public class MaterialTabHost extends TabHost implements ViewPager.OnPageChangeLi
         final Drawable d = indicator;
 
         View tabView = tabWidget.getChildTabViewAt(position);
+        if (tabView == null) {
+            return;
+        }
+        
         View nextTabView = position + 1 < tabWidget.getTabCount()
                 ? tabWidget.getChildTabViewAt(position + 1)
                 : null;
