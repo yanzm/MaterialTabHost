@@ -150,6 +150,11 @@ public class MaterialTabHost extends TabHost implements ViewPager.OnPageChangeLi
         }
     }
 
+    /**
+     * add new tab with title text
+     *
+     * @param title title text
+     */
     public void addTab(CharSequence title) {
         int layoutId = getLayoutId(type);
         TextView tv = (TextView) inflater.inflate(layoutId, tabWidget, false);
@@ -174,6 +179,34 @@ public class MaterialTabHost extends TabHost implements ViewPager.OnPageChangeLi
 
         addTab(newTabSpec(String.valueOf(tabId))
                 .setIndicator(tv)
+                .setContent(android.R.id.tabcontent));
+    }
+
+    /**
+     * add new tab with specified view
+     *
+     * @param view tab view
+     */
+    public void addTab(View view) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            view.setBackgroundResource(R.drawable.mth_tab_widget_background_ripple);
+
+        } else {
+            // create background using colorControlActivated
+            StateListDrawable d = new StateListDrawable();
+            d.addState(new int[]{android.R.attr.state_pressed}, new ColorDrawable(colorControlActivated));
+            d.setAlpha(180);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                view.setBackground(d);
+            } else {
+                view.setBackgroundDrawable(d);
+            }
+        }
+
+        int tabId = tabWidget.getTabCount();
+
+        addTab(newTabSpec(String.valueOf(tabId))
+                .setIndicator(view)
                 .setContent(android.R.id.tabcontent));
     }
 
@@ -217,7 +250,7 @@ public class MaterialTabHost extends TabHost implements ViewPager.OnPageChangeLi
         if (tabView == null) {
             return;
         }
-        
+
         View nextTabView = position + 1 < tabWidget.getTabCount()
                 ? tabWidget.getChildTabViewAt(position + 1)
                 : null;
