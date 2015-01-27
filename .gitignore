@@ -35,3 +35,11 @@ proguard/
 
 # Mac
 .DS_Store
+
+# for gh-pages
+MaterialTabHost.iml
+app
+mth
+maven_settings.gradle
+build.gradle
+settings.gradle
