@@ -43,3 +43,4 @@ mth
 maven_settings.gradle
 build.gradle
 settings.gradle
+.idea/
