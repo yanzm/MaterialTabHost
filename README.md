@@ -7,6 +7,18 @@ http://www.google.com/design/spec/components/tabs.html
 Usage
 ---------------
 
+### build.gradle
+
+```
+repositories {
+    maven { url 'http://yanzm.github.io/MaterialTabHost/repository' }
+}
+
+dependencies {
+    compile 'net.yanzm:mth:1.0.1'
+}
+```
+
 ### Layout XML
 
 ```
