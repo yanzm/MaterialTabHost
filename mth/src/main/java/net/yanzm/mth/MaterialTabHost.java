@@ -18,6 +18,7 @@ package net.yanzm.mth;
 
 import android.content.Context;
 import android.content.res.Resources;
+import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.ColorDrawable;
@@ -83,15 +84,21 @@ public class MaterialTabHost extends TabHost implements ViewPager.OnPageChangeLi
         TypedValue outValue = new TypedValue();
         Resources.Theme theme = context.getTheme();
 
+        // use ?attr/colorPrimary as background color
         theme.resolveAttribute(R.attr.colorPrimary, outValue, true);
-        int colorPrimary = outValue.data;
-        setBackgroundColor(colorPrimary);
+        setBackgroundColor(outValue.data);
 
+        // use ?attr/colorControlActivated as default indicator color
         theme.resolveAttribute(R.attr.colorControlActivated, outValue, true);
         colorControlActivated = outValue.data;
+
+        TypedArray a = context.getTheme().obtainStyledAttributes(attrs, R.styleable.MaterialTabHost, 0, 0);
+        int indicatorColor = a.getColor(R.styleable.MaterialTabHost_colorTabIndicator, colorControlActivated);
+        a.recycle();
+
         // ColorDrawable on 2.x does not use getBounds() so use ShapeDrawable
         indicator = new ShapeDrawable();
-        indicator.setColorFilter(colorControlActivated, PorterDuff.Mode.SRC_ATOP);
+        indicator.setColorFilter(indicatorColor, PorterDuff.Mode.SRC_ATOP);
 
         Resources res = context.getResources();
         indicatorHeight = res.getDimensionPixelSize(R.dimen.mth_tab_indicator_height);

@@ -79,6 +79,8 @@ dependencies {
 
 ### Color
 
+#### Default
+
 * backbround color : colorPrimary
 * indicator color : colorAccent or colorControlActivated
 
@@ -92,6 +94,20 @@ dependencies {
     </style>
 </resources>
 ```
+
+#### attributes
+
+* indicator color : colorTabIndicator
+
+```
+    <net.yanzm.mth.MaterialTabHost
+        android:id="@android:id/tabhost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:colorTabIndicator="#ff0000" />
+
+```
+
 
 ### Type
 
