@@ -133,13 +133,13 @@ public class MaterialTabHost extends TabHost implements ViewPager.OnPageChangeLi
     protected int getLayoutId(Type type) {
         switch (type) {
             case FullScreenWidth:
-                return R.layout.tab_widget_full;
+                return R.layout.mth_tab_widget_full;
             case Centered:
-                return R.layout.tab_widget;
+                return R.layout.mth_tab_widget;
             case LeftOffset:
-                return R.layout.tab_widget;
+                return R.layout.mth_tab_widget;
             default:
-                return R.layout.tab_widget_full;
+                return R.layout.mth_tab_widget_full;
         }
     }
 
@@ -149,7 +149,7 @@ public class MaterialTabHost extends TabHost implements ViewPager.OnPageChangeLi
         tv.setText(title);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            tv.setBackgroundResource(R.drawable.tab_widget_background_ripple);
+            tv.setBackgroundResource(R.drawable.mth_tab_widget_background_ripple);
 
         } else {
             // create background using colorControlActivated

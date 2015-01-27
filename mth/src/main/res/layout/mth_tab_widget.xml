@@ -16,12 +16,12 @@
 
 <TextView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="0dp"
+    android:layout_width="wrap_content"
     android:layout_height="match_parent"
-    android:layout_weight="1"
     android:gravity="bottom|center_horizontal"
     android:paddingBottom="@dimen/mth_tab_bottom_padding"
-    android:textColor="@color/fth_tab_widget_text"
+    android:paddingLeft="@dimen/mth_tab_width_padding"
+    android:paddingRight="@dimen/mth_tab_width_padding"
+    android:textColor="@color/mth_tab_widget_text"
     android:textSize="@dimen/mth_tab_text_size"
-    tools:layout_width="match_parent"
     tools:text="group 1 ITEM TWO" />
