@@ -297,7 +297,7 @@ public class MaterialTabHost extends TabHost implements ViewPager.OnPageChangeLi
         if (scrollingState == ViewPager.SCROLL_STATE_IDLE) {
             updateIndicatorPosition(position, 0);
         }
-        tabWidget.setCurrentTab(position);
+        setCurrentTab(position);
     }
 
     @Override
