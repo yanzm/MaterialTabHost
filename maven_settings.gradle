@@ -6,7 +6,7 @@ uploadArchives {
     repositories {
         mavenDeployer {
             repository url: "file://${deployTo.absolutePath}"
-            pom.version = "1.0.3"
+            pom.version = "1.0.4"
             pom.groupId = "net.yanzm"
             pom.artifactId = "mth"
         }
