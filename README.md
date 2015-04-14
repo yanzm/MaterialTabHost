@@ -15,7 +15,7 @@ repositories {
 }
 
 dependencies {
-    compile 'net.yanzm:mth:1.0.1'
+    compile 'net.yanzm:mth:1.0.4'
 }
 ```
 
